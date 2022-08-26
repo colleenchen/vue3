@@ -11,8 +11,10 @@ import Logo from "./assets/vue.svg";
 import { useWindowsPosition } from "./composables/useWindowsPosition.js";
 import { useAddCount } from "./composables/useAddCount.js";
 import { useFetch } from "./composables/useFetch.js";
-
+import { useCounterStore } from "./stores/counter.js";
 // export const getImgSrc = (url: string) => new URL(`/src/assets/${url}`, import.meta.url).href
+
+const store = useCounterStore();
 
 const { pageX, pageY } = useWindowsPosition();
 
@@ -53,6 +55,9 @@ onMounted(() => {
 <template>
   <!-- <Naive v-model="name" />
   <div>{{ name }}</div> -->
+  <div>{{ store.userList }}</div>
+  <div>{{ store.counter }}</div>
+  <div><button @click="store.fetchAPIData()">store ADD</button></div>
   <div v-if="data.length === 0 && errMsg === ''">loading...</div>
   <pre v-else>{{ data }}</pre>
   <div v-if="errMsg !== ''">{{ errMsg }}</div>
