@@ -1,0 +1,25 @@
+{
+  "name": "v",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.1",
+    "axios": "^0.27.2",
+    "pinia": "^2.0.20",
+    "sass": "^1.54.5",
+    "vue": "^3.2.37",
+    "vue-axios": "^3.4.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.3",
+    "naive-ui": "^2.32.2",
+    "vfonts": "^0.0.3",
+    "vite": "^3.0.7"
+  }
+}
