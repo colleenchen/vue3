@@ -22,11 +22,23 @@ watch(info, (newVal) => {
       @input="emit('update:modelValue', $event.target.value)"
     />
   </div>
+
+  <nav>
+    <router-link to="/Naive/XXX">XXX</router-link>
+    <router-link to="/Naive/YYY">YYY</router-link>
+  </nav>
+  <router-view></router-view>
 </template>
 
 
 <style lang="scss" scoped>
 div {
   margin: 10px;
+}
+nav {
+  margin: 20px;
+  a {
+    margin: 20px;
+  }
 }
 </style>

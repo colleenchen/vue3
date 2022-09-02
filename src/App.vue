@@ -55,7 +55,17 @@ onMounted(() => {
 <template>
   <!-- <Naive v-model="name" />
   <div>{{ name }}</div> -->
-  <div>{{ store.userList }}</div>
+
+  <div class="nav">
+    <router-link to="/">Home</router-link>
+    <router-link to="/Naive">Naive</router-link>
+  </div>
+  <nav>
+    <router-link to="/About/AAA">A</router-link>
+    <router-link to="/About/BBB">B</router-link>
+  </nav>
+  <router-view></router-view>
+  <!-- <div>{{ store.userList }}</div>
   <div>{{ store.counter }}</div>
   <div><button @click="store.fetchAPIData()">store ADD</button></div>
   <div v-if="data.length === 0 && errMsg === ''">loading...</div>
@@ -64,7 +74,7 @@ onMounted(() => {
   <div>{{ count }}</div>
   <p><button @click="addCouunt">加加++</button></p>
   <div>{{ pageX }},{{ pageY }}</div>
-  <Testbox :name="name" @change-name="updateName" />
+  <Testbox :name="name" @change-name="updateName" /> -->
   <!-- <AddEmit @AddEmit="callBack" />
   <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -89,7 +99,7 @@ onMounted(() => {
     <component :is="compShow"></component>
   </div> -->
 </template>
-<style scoped>
+<style lang="scss" scoped>
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -99,7 +109,23 @@ onMounted(() => {
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: aquamarine;
+  a {
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+  }
+}
+nav {
+  a {
+    margin: 20px;
+  }
+}
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
